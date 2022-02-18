@@ -4,28 +4,23 @@ html {
     scroll-behavior: smooth;
     box-sizing: border-box;
 }
-
 h1 {
     color: #ffffff;
     font-weight: 700;
     font-size: 7rem;
     text-align: center;
 }
-
 h2 {
     font-size: 5rem;
     margin: 50px 0;
 }
-
 p {
     font-size: 1.8rem;
 }
-
-a, .contact-form-submit-button {
+a{
     text-decoration: none;
     transition: all 0.5s;
 }
-
 .nav-bar {
     display: flex;
     justify-content: space-between;
@@ -36,25 +31,20 @@ a, .contact-form-submit-button {
     font-size: 1.2rem;
     text-transform: uppercase;
 }
-
 .nav-bar a:link, .nav-bar a:visited {
     color: #001453;
 }
-
 .nav-bar a:hover {
     color: #ff8000;
     text-decoration: underline;
 }
-
 .nav-menu {
     display: flex;
 }
-
 .nav-menu-item {
     margin: 0.2em;
     padding: 0.6em;
 }
-
 .nav-title {
     font-size: 2.5rem;
     font-weight: 700;
@@ -68,6 +58,7 @@ header {
     align-items: center;
     justify-content: center;
     color: #ffffff;
+    padding: 30px;
 }
 .price-calculator-section {
     display: flex;
@@ -105,22 +96,20 @@ header {
     -webkit-transition: .2s;
     transition: opacity .2s;
 }
-
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: #04AA6D;
+    background: #001453;
     cursor: pointer;
 }
-
 .slider::-moz-range-thumb {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: #04AA6D;
+    background: #001453;
     cursor: pointer;
 }
 .month-yearly-toggle-div {
@@ -128,6 +117,52 @@ header {
     align-items: center;
     justify-content: flex-end;
     gap: 20px;
+}
+.yearlyDiscountSwitch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+.yearlyDiscountSwitch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.discountToggle {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+.discountToggle:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+input:checked + .discountToggle {
+    background-color: #001453;
+}
+input:focus + .discountToggle {
+    box-shadow: 0 0 1px #001453;
+}
+input:checked + .discountToggle:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
 }
 .discount-text {
     background-color: #FFFF00;
@@ -152,19 +187,32 @@ header {
     width: 20px;
     height: 20px;
 }
-
+.trial-start-button {
+    transition: all 0.5s;
+    color: #001453;
+    border: solid #001453 2px;
+    background-color: transparent;
+    border-radius: 10px;
+    width: 190px;
+    height: 50px;
+    font-size: 1.5rem;
+    margin-right: 50px;
+}
+.trial-start-button:hover {
+    color: #ffffff;
+    background-color: #001453;
+    border-color: #001453;
+}
 footer {
     background-color: #ffffff;
     padding: 40px 0;
     display: flex;
     justify-content: center;
 }
-
 footer div {
     display: flex;
     gap: 25px;
 }
-
 .footer-item a {
     color:#001453;
     font-size: 1.5rem;
@@ -176,7 +224,6 @@ footer div {
 .footer-item a:hover {
     color: #bdbdbd;
 }
-
 @media screen and (max-width: 700px) {
     html {
         font-size: 2vw;
@@ -184,11 +231,14 @@ footer div {
     h1 {
         font-size: 7rem;
     }
-
     h2 {
         font-size: 5rem;
     }
     .nav-bar{
         flex-direction: column;
+    }
+    .benefits-parent {
+        flex-direction: column;
+        margin-right: 0;
     }
 }

@@ -72,7 +72,10 @@
                 </div>
                 <div class="month-yearly-toggle-div">
                     <p>Monthly Billing</p>
-                    <input type="checkbox" id="monthly-yearly-switch">
+                    <label class="yearlyDiscountSwitch">
+                        <input type="checkbox" id="monthly-yearly-switch">
+                        <span class="discountToggle"></span>
+                    </label>
                     <p>Yearly Billing</p>
                     <p class="discount-text">25% discount</p>
                 </div>
