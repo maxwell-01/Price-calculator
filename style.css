@@ -21,8 +21,15 @@ a{
     text-decoration: none;
     transition: all 0.5s;
 }
-.nav-bar {
+.flex-row {
     display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.nav-bar {
     justify-content: space-between;
     align-items: center;
     padding-top: 10px;
@@ -38,9 +45,6 @@ a{
     color: #ff8000;
     text-decoration: underline;
 }
-.nav-menu {
-    display: flex;
-}
 .nav-menu-item {
     margin: 0.2em;
     padding: 0.6em;
@@ -53,27 +57,21 @@ a{
 header {
     background-color: #001453;
     min-height: 30vh;
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     color: #ffffff;
     padding: 30px;
 }
 .price-calculator-section {
-    display: flex;
     justify-content: center;
 }
 .price-calculator {
-    display: flex;
-    flex-direction: column;
     width: 600px;
     border: solid #001453 2px;
     margin: 50px;
     padding: 10px;
 }
 .calculator-headings {
-    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -82,7 +80,6 @@ header {
     gap: 10px;
 }
 .price-counter {
-    display: flex;
     align-items: center;
 }
 .slider {
@@ -113,7 +110,7 @@ header {
     cursor: pointer;
 }
 .month-yearly-toggle-div {
-    display: flex;
+    margin-right: 50px;
     align-items: center;
     justify-content: flex-end;
     gap: 20px;
@@ -170,16 +167,10 @@ input:checked + .discountToggle:before {
     font-size: 1.5rem;
 }
 .benefits-parent {
-    display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.benefits-div {
-    display: flex;
-    flex-direction: column;
-}
-.benefits-div div {
-    display: flex;
+.benefits {
     align-items: center;
     gap: 10px;
 }
@@ -206,11 +197,9 @@ input:checked + .discountToggle:before {
 footer {
     background-color: #ffffff;
     padding: 40px 0;
-    display: flex;
     justify-content: center;
 }
 footer div {
-    display: flex;
     gap: 25px;
 }
 .footer-item a {
@@ -236,6 +225,9 @@ footer div {
     }
     .nav-bar{
         flex-direction: column;
+    }
+    .month-yearly-toggle-div {
+        margin-right: 0;
     }
     .benefits-parent {
         flex-direction: column;
