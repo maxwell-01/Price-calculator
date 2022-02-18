@@ -57,9 +57,9 @@
         <section class="price-calculator-section">
             <div class="price-calculator">
                 <div class="calculator-headings">
-                    <div class="pageviews-counter">
-                        <p id="pageviews-counter">100k</p>
-                        <p>pageviews</p>
+                    <div class="page-views-counter">
+                        <p id="page-views-counter">100k</p>
+                        <p>page-views</p>
                     </div>
                     <div class="price-counter">
                         <p class="price-counter-text">$</p>
@@ -68,7 +68,7 @@
                     </div>
                 </div>
                 <div class="slider-container">
-                    <input type="range" min="1" max="5" value="2" class="slider" id="slider-input">
+                    <input type="range" min="0" max="4" value="2" class="slider" id="slider-input">
                 </div>
                 <div class="month-yearly-toggle-div">
                     <p>Monthly Billing</p>
